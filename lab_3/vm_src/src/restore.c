@@ -11,12 +11,9 @@
 int main(int argc, char *argv[])
 {
     
-    
-    /* 1. Create a blank VM */
     create_vm();
     add_memory(VM_MEMORY_SIZE, 0);
     create_bootstrap();
-    /* 2. Read the VM image from disk BEFORE creating vCPU */
     restore();
     return 0;
 }
